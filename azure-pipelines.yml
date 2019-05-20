@@ -31,5 +31,14 @@ jobs:
       echo hello from win
       echo helloe from win line two
       docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
-      docker built -t test .
+      docker build -t test .
     displayName: 'Run a two-line script msw'
+- job: KiCad Winbuilder
+  pool:
+    vmImage: 'win1803'
+  steps:
+  - script: |
+      git clone https://github.com/KiCad/kicad-winbuilder.git
+      cd kicad-winbuilder
+      make_x86_64.bat
+    displayName: 'Attempting to build kicad-winbuilder'
