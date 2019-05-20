@@ -40,7 +40,7 @@ jobs:
   - script: |
       git clone https://github.com/KiCad/kicad-winbuilder.git
       cd kicad-winbuilder
-      set
+      REM set
       echo truing cpack
       dir ./.ci
       REM C:\Program Files\CMake\bin\cpack.exe
