@@ -6,6 +6,10 @@
 trigger:
 - master
 
+variables:
+  dockerId: my-docker-id  # Replace with your Docker ID for Docker Hub or the admin user name for the Azure Container Registry
+  imageName: my-image-name  # Replace with the name of the image you want to publish
+
 jobs:
 - job: Linux
   pool:
@@ -27,4 +31,5 @@ jobs:
       echo hello from win
       echo helloe from win line two
       docker run microsoft/dotnet-samples:dotnetapp-nanoserver
+      docker build -t $(dockerId)/$(imageName) .
     displayName: 'Run a two-line script msw'
