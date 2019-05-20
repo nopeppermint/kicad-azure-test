@@ -31,4 +31,5 @@ jobs:
       echo hello from win
       echo helloe from win line two
       docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
+      docker built -t test .
     displayName: 'Run a two-line script msw'
