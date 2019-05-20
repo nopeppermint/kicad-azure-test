@@ -12,6 +12,7 @@ SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference
 # Choco disable upload progress 
 RUN choco feature disable --name showDownloadProgress
 
+RUN choco -?
 RUN choco --help
 #RUN git clone https://github.com/KiCad/kicad-winbuilder.git
 #RUN cd kicad-winbuilder
