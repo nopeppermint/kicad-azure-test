@@ -35,7 +35,7 @@ jobs:
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder
   pool:
-    vmImage: 'win1803'
+    vmImage: 'vs2019-win2019'
   steps:
   - script: |
       git clone https://github.com/KiCad/kicad-winbuilder.git
@@ -48,7 +48,6 @@ jobs:
       cd 
       dir /s cmake.exe
       echo truing cpack
-      dir ./.ci
       REM C:\Program Files\CMake\bin\cpack.exe
       REM make_x86_64.bat
     displayName: 'Attempting to build kicad-winbuilder'
