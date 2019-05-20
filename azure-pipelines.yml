@@ -33,7 +33,7 @@ jobs:
       REM docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
       REM docker build -t test .
     displayName: 'Run a two-line script msw'
-- job: KiCad_Winbuilder
+- job: KiCad_Winbuilder_x86_64
   pool:
     vmImage: 'windows-2019'
   steps:
@@ -44,4 +44,17 @@ jobs:
       echo Yoyoyoyoy
       cmake --version
       make_x86_64.bat
+    displayName: 'Attempting to build kicad-winbuilder'
+
+- job: KiCad_Winbuilder_i686
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - script: |
+      git clone https://github.com/KiCad/kicad-winbuilder.git
+      cd kicad-winbuilder
+      set
+      echo Yoyoyoyoy
+      cmake --version
+      make_i686.bat
     displayName: 'Attempting to build kicad-winbuilder'
