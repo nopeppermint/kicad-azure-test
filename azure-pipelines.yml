@@ -31,7 +31,7 @@ jobs:
       echo hello from win
       echo helloe from win line two
       REM docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
-      docker build -t test .
+      REM docker build -t test .
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder
   pool:
