@@ -31,7 +31,7 @@ jobs:
       echo hello from win
       echo helloe from win line two
       REM docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
-      REM docker build -t test .
+      docker build -t test .
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
   pool:
@@ -43,7 +43,7 @@ jobs:
       set
       echo Yoyoyoyoy
       cmake --version
-      make_x86_64.bat
+      REM make_x86_64.bat
     displayName: 'Attempting to build kicad-winbuilder'
 
 - job: KiCad_Winbuilder_i686
@@ -56,5 +56,5 @@ jobs:
       set
       echo Yoyoyoyoy
       cmake --version
-      make_i686.bat
+      REM make_i686.bat
     displayName: 'Attempting to build kicad-winbuilder'
