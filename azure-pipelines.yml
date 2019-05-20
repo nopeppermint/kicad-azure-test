@@ -40,5 +40,6 @@ jobs:
   - script: |
       git clone https://github.com/KiCad/kicad-winbuilder.git
       cd kicad-winbuilder
-      make_x86_64.bat
+      set
+      REM make_x86_64.bat
     displayName: 'Attempting to build kicad-winbuilder'
