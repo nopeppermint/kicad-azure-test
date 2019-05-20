@@ -1,2 +1,2 @@
-FROM microsoft/dotnet-samples:dotnetapp-nanoserver
+FROM mcr.microsoft.com/windows/nanoserver:1809
 RUN dir
