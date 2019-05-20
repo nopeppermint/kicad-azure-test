@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/powershell:nanoserver-1809
 RUN dir
-RUN pwsh Write-Host "Fisk"
+RUN pwsh -Command Write-Host "Fisk"
 
 
 # Install Chocolatey
