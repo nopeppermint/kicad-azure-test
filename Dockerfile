@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/windows/nanoserver:1809
 RUN dir
+RUN powershell echo Fisk
+
 
 # Install Chocolatey
 RUN powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
