@@ -26,4 +26,5 @@ jobs:
   - script: |
       echo hello from win
       echo helloe from win line two
+      docker run microsoft/dotnet-samples:dotnetapp-nanoserver
     displayName: 'Run a two-line script msw'
