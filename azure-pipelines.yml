@@ -33,7 +33,7 @@ jobs:
       docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
       docker build -t test .
     displayName: 'Run a two-line script msw'
-- job: KiCad Winbuilder
+- job: KiCad_Winbuilder
   pool:
     vmImage: 'win1803'
   steps:
