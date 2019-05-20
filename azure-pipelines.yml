@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - script: echo hello from Linux
+    displayName: 'Run a one-line script lin'
+- job: macOS
+  pool:
+    vmImage: 'macOS-10.14'
+  steps:
+  - script: echo hello from macOS
+    displayName: 'Run a one-line script mac'
+- job: Windows
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - script: |
+    echo hello from Windows
+    echo Another line
+  displayName: 'Run a one-line script msw'
