@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/nanoserver:1809
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 RUN dir
 RUN type License.txt
 RUN git clone https://github.com/KiCad/kicad-winbuilder.git
