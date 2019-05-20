@@ -42,6 +42,7 @@ jobs:
       cd kicad-winbuilder
       set
       echo truing cpack
+      cmake --version
       REM C:\Program Files\CMake\bin\cpack.exe
       REM make_x86_64.bat
     displayName: 'Attempting to build kicad-winbuilder'
