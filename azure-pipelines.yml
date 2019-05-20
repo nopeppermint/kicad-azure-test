@@ -35,7 +35,7 @@ jobs:
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder
   pool:
-    vmImage: 'vs2019-win2019'
+    vmImage: 'windows-2019'
   steps:
   - script: |
       git clone https://github.com/KiCad/kicad-winbuilder.git
