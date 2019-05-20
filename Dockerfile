@@ -1,13 +1,13 @@
 FROM mcr.microsoft.com/powershell:nanoserver-1809
 RUN dir
-RUN pwsh Write-Host Fisk
+RUN pwsh Write-Host "Fisk"
 
 
 # Install Chocolatey
 RUN powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
 # New Powershell, so choco is available 
-SHELL ["powershell"]
+SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 # Choco disable upload progress 
 RUN choco feature disable --name showDownloadProgress
