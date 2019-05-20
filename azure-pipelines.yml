@@ -30,7 +30,7 @@ jobs:
   - script: |
       echo hello from win
       echo helloe from win line two
-      docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
+      REM docker run microsoft/dotnet-samples:dotnetapp-nanoserver-1803
       docker build -t test .
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder
@@ -43,6 +43,6 @@ jobs:
       set
       echo truing cpack
       dir ./.ci
-      C:\Program Files\CMake\bin\cpack.exe
+      REM C:\Program Files\CMake\bin\cpack.exe
       REM make_x86_64.bat
     displayName: 'Attempting to build kicad-winbuilder'
