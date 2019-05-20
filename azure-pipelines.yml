@@ -40,13 +40,7 @@ jobs:
   - script: |
       git clone https://github.com/KiCad/kicad-winbuilder.git
       cd kicad-winbuilder
-      REM set
-      echo Nick is searching stuff
-      dir /s cmake.exe
-      echo Nick is searching more
-      cd D:/
-      cd 
-      dir /s cmake.exe
+      set
       echo truing cpack
       REM C:\Program Files\CMake\bin\cpack.exe
       REM make_x86_64.bat
