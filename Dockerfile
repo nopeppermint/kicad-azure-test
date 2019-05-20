@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/nanoserver:1809
+FROM mcr.microsoft.com/powershell
 RUN dir
 RUN pwsh echo Fisk
 
