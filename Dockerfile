@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/windows/nanoserver:1809
 RUN dir
-RUN powershell echo Fisk
+RUN pwsh echo Fisk
 
 
 # Install Chocolatey
