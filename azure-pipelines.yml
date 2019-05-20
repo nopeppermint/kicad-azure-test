@@ -41,6 +41,7 @@ jobs:
       git clone https://github.com/KiCad/kicad-winbuilder.git
       cd kicad-winbuilder
       set
+      echo truing cpack
       C:\Program Files\CMake\bin\cpack.exe
       REM make_x86_64.bat
     displayName: 'Attempting to build kicad-winbuilder'
