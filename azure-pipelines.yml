@@ -23,7 +23,5 @@ jobs:
   pool:
     vmImage: 'windows-2019'
   steps:
-  - script: |
-    echo hello from Windows
-    echo Another line
-  displayName: 'Run a one-line script msw'
+  - script: echo hello from Windows
+    displayName: 'Run a one-line script msw'
