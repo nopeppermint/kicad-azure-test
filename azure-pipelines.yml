@@ -25,7 +25,7 @@ jobs:
     displayName: 'Run a one-line script mac'
 - job: Windows
   pool:
-    vmImage: 'win1803'
+    vmImage: 'win1809'
   steps:
   - script: |
       echo hello from win
