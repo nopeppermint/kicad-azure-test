@@ -4,6 +4,7 @@ RUN pwsh -Command Write-Host "Fisk"
 
 RUN pwsh -Command $PSVersionTable.PSVersion
 RUN pwsh -Command Get-ExecutionPolicy
+
 # Install Chocolatey
 #RUN pwsh -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
