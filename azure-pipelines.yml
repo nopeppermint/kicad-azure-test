@@ -33,7 +33,8 @@ jobs:
       cmake --version
       git --version
       docker --version
-
+      REM docker build -t test .
+      pwsh -Command Write-Host "Nick er sej"
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
   pool:
