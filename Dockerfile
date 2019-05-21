@@ -12,7 +12,7 @@ RUN cmake --version
 
 COPY cmake.zip .
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
-RUn dir _tools
+RUN dir _tools
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
