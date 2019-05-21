@@ -37,6 +37,7 @@ jobs:
       choco --version
       pwsh -Command Write-Host "Nick er sej"
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/archive/v0.7.3.1.zip','c:\posh-git.zip') 
+      dir c:\
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
   pool:
