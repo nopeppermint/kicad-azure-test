@@ -14,7 +14,7 @@ RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Pa
 RUN dir _tools
 
 RUN pwsh -Command Write-Host "Cmake install passsed"
-RUn dir _tools/cmake-3.14.4-win64-x64/bin/
+RUN dir _tools/cmake-3.14.4-win64-x64/bin/
 RUN _tools/cmake-3.14.4-win64-x64/bin/cmake.exe --version
 
 #RUN pwsh -Command \
