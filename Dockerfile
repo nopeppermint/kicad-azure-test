@@ -8,7 +8,8 @@ RUN pwsh -Command Write-Host "Fisk"
 RUN dir
 RUN pwsh Install-FromMsi -Name 'cmake' -Url 'https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-win64-x64.msi'
 
-
+RUN pwsh -Command Write-Host "Cmake install passsed"
+RUN cmake --version
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
