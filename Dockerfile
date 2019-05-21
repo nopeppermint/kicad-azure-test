@@ -7,8 +7,6 @@ RUN pwsh -Command Write-Host "Fisk"
 
 RUN dir
 
-
-
 COPY cmake.zip .
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
 RUN dir _tools
