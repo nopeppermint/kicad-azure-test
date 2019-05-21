@@ -37,7 +37,8 @@ jobs:
       choco --version
       choco search wget
       pwsh -Command Write-Host "Nick er sej"
-      pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-win64-x64.msi','c:\cmake-3.14.4-win64-x64.msi') 
+      pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-win64-x64.msi','cmake-3.14.4-win64-x64.msi') 
+      docker build -t test .
       dir c:\
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
