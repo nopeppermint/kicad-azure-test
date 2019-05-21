@@ -8,8 +8,8 @@ RUN pwsh -Command Get-ExecutionPolicy
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
-#  (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/zipball/master','posh-git.zip') ; \
-#  Expand-Archive -Path posh-git.zip -DestinationPath ./
+#  (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/zipball/master','c:\posh-git.zip') ; \
+#  Expand-Archive -Path posh-git.zip -DestinationPath c:\
 
 RUN dir
 RUN pwsh -Command \
