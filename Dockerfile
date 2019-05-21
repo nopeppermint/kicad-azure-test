@@ -11,7 +11,6 @@ RUN pwsh -Command Get-ExecutionPolicy
 # New Powershell, so choco is available 
 #SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
-RUN dir
 
 # Choco disable upload progress 
 #RUN choco feature disable --name showDownloadProgress
