@@ -35,7 +35,6 @@ jobs:
       docker --version
       REM docker build -t test .
       choco --version
-      choco search wget
       pwsh -Command Write-Host "Nick er sej"
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-win64-x64.msi','cmake.msi')
       dir 
