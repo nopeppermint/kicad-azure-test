@@ -13,10 +13,10 @@ RUN dir
 RUN ls
 
 # Choco disable upload progress 
-RUN choco feature disable --name showDownloadProgress
+#RUN choco feature disable --name showDownloadProgress
 
-RUN choco -?
-RUN choco --help
+#RUN choco -?
+#RUN choco --help
 #RUN git clone https://github.com/KiCad/kicad-winbuilder.git
 #RUN cd kicad-winbuilder
 #RUN dir
