@@ -14,7 +14,7 @@ RUN pwsh -Command Get-ExecutionPolicy
 RUN dir
 RUN pwsh -Command \
   $ErrorActionPreference = 'Stop'; \
-  (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/archive/v0.7.3.1.zip','posh-git.zip') 
+  (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/archive/v0.7.3.1.zip','c:\posh-git.zip') 
 RUN dir
 
 
