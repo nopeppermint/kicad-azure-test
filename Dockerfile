@@ -34,8 +34,8 @@ RUN cmake-3.14.4-win64-x64/bin/cmake.exe --version
 #RUN choco -?
 #RUN choco --help
 
-ADD kicad-winbuilder .
+ADD kicad-winbuilder kicad-winbuilder
 #RUN git clone https://github.com/KiCad/kicad-winbuilder.git
-#RUN cd kicad-winbuilder
+RUN cd kicad-winbuilder
 RUN dir
 RUN cmake-3.14.4-win64-x64/bin/cmake.exe -P KiCad-Winbuilder.cmake
