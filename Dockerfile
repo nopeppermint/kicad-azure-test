@@ -5,12 +5,6 @@ COPY cmake.msi .
 
 RUN pwsh -Command Write-Host "Fisk"
 
-RUN pwsh -Command $PSVersionTable.PSVersion
-RUN pwsh -Command Get-ExecutionPolicy
-
-RUN pwsh -Command Invoke-WebRequest -Uri "https://github.com/dahlbyk/posh-git/archive/v0.7.3.1.zip" -OutFile "C:\Users\posh-git.zip"
-RUN dir C:\Program Files\
-
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
