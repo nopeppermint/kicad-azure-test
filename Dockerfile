@@ -7,12 +7,14 @@ RUN pwsh -Command Write-Host "Fisk"
 
 RUN dir
 
-RUN pwsh -Command Write-Host "Cmake install passsed"
-RUN cmake --version
+
 
 COPY cmake.zip .
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
 RUN dir _tools
+
+RUN pwsh -Command Write-Host "Cmake install passsed"
+RUN cmake --version
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
