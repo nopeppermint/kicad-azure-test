@@ -1,6 +1,8 @@
 FROM mcr.microsoft.com/powershell:nanoserver-1809
 RUN cd
 RUN dir
+COPY cmake.msi .
+
 RUN pwsh -Command Write-Host "Fisk"
 
 RUN pwsh -Command $PSVersionTable.PSVersion
