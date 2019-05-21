@@ -30,7 +30,7 @@ jobs:
   - script: |
       echo hello from win
       echo helloe from win line two
-      docker --versionm
+      docker --version
       docker build -t test .
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
