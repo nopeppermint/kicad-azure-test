@@ -1,4 +1,5 @@
 FROM mcr.microsoft.com/powershell:nanoserver-1809
+RUN cd
 RUN dir
 RUN pwsh -Command Write-Host "Fisk"
 
