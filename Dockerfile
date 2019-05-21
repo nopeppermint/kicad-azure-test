@@ -17,13 +17,6 @@ RUN dir C:\Program Files\
 #  (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/zipball/master','c:\posh-git.zip') ; \
 #  Expand-Archive -Path c:\posh-git.zip -DestinationPath c:\
 
-RUN dir
-RUN pwsh -Command \
-  $ErrorActionPreference = 'Stop'; \
-  (New-Object System.Net.WebClient).DownloadFile('https://github.com/dahlbyk/posh-git/archive/v0.7.3.1.zip','c:\posh-git.zip') 
-RUN dir
-
-
 # Install Chocolatey
 #RUN pwsh -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
@@ -36,7 +29,7 @@ RUN dir
 
 #RUN choco -?
 #RUN choco --help
-RUN git clone https://github.com/KiCad/kicad-winbuilder.git
-RUN cd kicad-winbuilder
-RUN dir
-RUN cmake -P KiCad-Winbuilder.cmake
+#RUN git clone https://github.com/KiCad/kicad-winbuilder.git
+#RUN cd kicad-winbuilder
+#RUN dir
+#RUN cmake -P KiCad-Winbuilder.cmake
