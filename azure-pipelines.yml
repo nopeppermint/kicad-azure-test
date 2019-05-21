@@ -30,6 +30,8 @@ jobs:
   - script: |
       echo hello from win
       echo helloe from win line two
+      cmake --version
+      git --version
       docker --version
       docker build -t test .
     displayName: 'Run a two-line script msw'
