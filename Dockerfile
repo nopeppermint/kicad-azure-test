@@ -14,7 +14,7 @@ RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Pa
 RUN dir _tools
 
 RUN pwsh -Command Write-Host "Cmake install passsed"
-RUN cmake --version
+RUN cmake-3.14.4-win64-x64/bin/cmake.exe --version
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
@@ -33,7 +33,9 @@ RUN cmake --version
 
 #RUN choco -?
 #RUN choco --help
+
+ADD kicad-winbuilder .
 #RUN git clone https://github.com/KiCad/kicad-winbuilder.git
-#RUN cd kicad-winbuilder
-#RUN dir
-#RUN cmake -P KiCad-Winbuilder.cmake
+RUN cd kicad-winbuilder
+RUN dir
+RUN cmake-3.14.4-win64-x64/bin/cmake.exe -P KiCad-Winbuilder.cmake
