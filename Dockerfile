@@ -12,7 +12,6 @@ RUN pwsh -Command Get-ExecutionPolicy
 #SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 RUN dir
-RUN ls
 
 # Choco disable upload progress 
 #RUN choco feature disable --name showDownloadProgress
