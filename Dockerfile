@@ -17,6 +17,7 @@ RUN ls
 
 #RUN choco -?
 #RUN choco --help
-#RUN git clone https://github.com/KiCad/kicad-winbuilder.git
-#RUN cd kicad-winbuilder
-#RUN dir
+RUN git clone https://github.com/KiCad/kicad-winbuilder.git
+RUN cd kicad-winbuilder
+RUN dir
+RUN cmake -P KiCad-Winbuilder.cmake
