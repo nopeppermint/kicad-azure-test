@@ -33,7 +33,7 @@ jobs:
       cmake --version
       git --version
       docker --version
-      docker build -t test .
+
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
   pool:
