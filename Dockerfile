@@ -5,6 +5,8 @@ COPY cmake.msi .
 
 RUN pwsh -Command Write-Host "Fisk"
 
+RUN dir
+
 
 #RUN pwsh -Command \
 #  $ErrorActionPreference = 'Stop'; \
