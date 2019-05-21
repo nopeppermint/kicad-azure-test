@@ -2,12 +2,12 @@ FROM mcr.microsoft.com/powershell:nanoserver-1809
 RUN dir
 RUN pwsh -Command Write-Host "Fisk"
 
-
+RUN pwsh -Command $PSVersionTable.PSVersion
 # Install Chocolatey
 #RUN pwsh -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
 # New Powershell, so choco is available 
-SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+#SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 RUN dir
 RUN ls
