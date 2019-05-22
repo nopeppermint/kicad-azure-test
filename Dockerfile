@@ -12,8 +12,8 @@ RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Pa
 RUN dir _tools
 
 
-COPY 7za920.zip .
-RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path 7za920.zip -DestinationPath _tools -Force
+COPY 7zip.zip .
+RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path 7zip.zip -DestinationPath _tools -Force
 RUN dir _tools
 
 RUN C:\_tools\7za.exe --help
