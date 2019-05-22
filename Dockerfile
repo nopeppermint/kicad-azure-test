@@ -13,6 +13,7 @@ RUN dir
 RUN start /wait 7zip.exe /S
 RUN dir _tools
 RUN 7za.exe
+RUN dir "C:\Program Files"
 RUN C:\_tools\7za.exe --help
 
 
