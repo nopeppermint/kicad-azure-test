@@ -11,6 +11,7 @@ COPY 7zip.exe .
 COPY cmake.zip .
 
 RUN dir
+RUN mkdir "C:\_tools"
 RUN start /wait 7zip.exe /S  /D="C:\_tools"
 RUN dir _tools
 #RUN 7za.exe
