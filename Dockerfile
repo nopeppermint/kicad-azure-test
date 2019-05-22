@@ -12,13 +12,14 @@ COPY cmake.zip .
 RUN dir
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path 7zip.zip -DestinationPath _tools -Force
 RUN dir _tools
+RUN C:\_tools\7za.exe --help
 
 
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
 RUN dir _tools
 
 
-RUN C:\_tools\7za.exe --help
+
 
 RUN pwsh -Command Write-Host "Cmake install passsed"
 RUN dir _tools\cmake-3.14.4-win64-x64\bin
