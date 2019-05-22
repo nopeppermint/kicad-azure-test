@@ -7,12 +7,19 @@ RUN pwsh -Command Write-Host "Fisk"
 
 RUN dir
 
+COPY 7zip.zip .
 COPY cmake.zip .
+RUN dir
+RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path 7zip.zip -DestinationPath _tools -Force
+RUN dir _tools
+
+
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
 RUN dir _tools
 
 
 COPY 7zip.zip .
+RUN dir
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path 7zip.zip -DestinationPath _tools -Force
 RUN dir _tools
 
