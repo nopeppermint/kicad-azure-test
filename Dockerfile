@@ -7,11 +7,12 @@ RUN pwsh -Command Write-Host "Fisk"
 
 RUN dir
 
-COPY 7zip.7z .
+COPY 7zip.exe .
 COPY cmake.zip .
 RUN dir
-RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path 7zip.7z -DestinationPath _tools -Force
+RUN start /wait 7zip.exe /S
 RUN dir _tools
+RUN 7za.exe
 RUN C:\_tools\7za.exe --help
 
 
