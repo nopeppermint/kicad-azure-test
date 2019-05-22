@@ -13,6 +13,7 @@ RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Pa
 RUN dir _tools
 RUN dir
 RUN start /wait 7zip.exe /S  /D="C:\_tools"
+RUN dir _tools
 RUN 7za.exe
 RUN dir "C:\Program Files"
 RUN C:\_tools\7za.exe --help
