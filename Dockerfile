@@ -9,8 +9,7 @@ RUN dir
 
 COPY 7zip.exe .
 COPY cmake.zip .
-RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
-RUN dir _tools
+
 RUN dir
 RUN start /wait 7zip.exe /S  /D="C:\_tools"
 RUN dir _tools
@@ -18,6 +17,9 @@ RUN dir _tools
 RUN dir "C:\Program Files"
 RUN C:\_tools\7za.exe --help
 
+
+RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
+RUN dir _tools
 
 
 
