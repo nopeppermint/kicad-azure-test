@@ -14,7 +14,7 @@ RUN dir
 RUN mkdir "C:\_tools"
 RUN start /wait 7zip.exe /SD /D="C:\_tools\sss"
 
-RUN start /wait 7zip.msi /quiet INSTALLDIR="C:\_tools"
+RUN start /wait 7zip.msi /q INSTALLDIR="C:\_tools"
 
 #RUN pwsh -Command Start-Process msiexec.exe -Wait -ArgumentList '/I 7zip.msi /quiet INSTALLDIR="C:\_tools"'
 
