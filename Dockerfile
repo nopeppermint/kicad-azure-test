@@ -1,5 +1,5 @@
 #hack for netapi32.dll https://github.com/StefanScherer/dockerfiles-windows/tree/master/golang-issue-21867
-FROM mcr.microsoft.com/windows/servercore-insider as core
+FROM mcr.microsoft.com/windows/servercore:ltsc2019 as core
 
 
 FROM mcr.microsoft.com/powershell:nanoserver-1809
