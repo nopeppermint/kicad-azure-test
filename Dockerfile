@@ -12,9 +12,9 @@ COPY 7zip.msi .
 
 RUN dir
 RUN mkdir "C:\_tools"
-RUN start /wait 7zip.exe /SD /D="C:\_tools\sss"
+#RUN start /wait 7zip.exe /SD /D="C:\_tools\sss"
 
-RUN start /wait 7zip.msi /q INSTALLDIR="C:\_tools"
+#RUN start /wait 7zip.msi /q INSTALLDIR="C:\_tools"
 
 #RUN pwsh -Command Start-Process msiexec.exe -Wait -ArgumentList '/I 7zip.msi /quiet INSTALLDIR="C:\_tools"'
 
@@ -22,7 +22,7 @@ RUN start /wait 7zip.msi /q INSTALLDIR="C:\_tools"
 RUN dir _tools
 #RUN 7za.exe
 RUN dir "C:\Program Files"
-RUN C:\_tools\7za.exe --help
+#RUN C:\_tools\7za.exe --help
 
 COPY cmake.zip .
 RUN pwsh -Command  $ProgressPreference = 'SilentlyContinue' ; Expand-Archive -Path cmake.zip -DestinationPath _tools -Force
