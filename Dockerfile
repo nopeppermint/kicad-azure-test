@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/windows/servercore-insider as core
 
 FROM mcr.microsoft.com/powershell:nanoserver-1809
 
-COPY --from=core /windows/system32/netapi32.dll
+COPY --from=core /windows/system32/netapi32.dll /windows/system32/netapi32.dll
 
 RUN cd
 RUN dir
