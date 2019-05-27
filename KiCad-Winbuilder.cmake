@@ -156,7 +156,7 @@ macro( download_msys2mingw_base_package PACKAGE MD5 )
     endif()
 
     execute_process(
-        COMMAND "${SEVENZ_COMMAND}" x "${DOWNLOADS_DIR}/${PACKAGE}" "-y"
+        COMMAND "./${DOWNLOADS_DIR}/${PACKAGE}" "--platform minimal --script auto-install.js -v"
         WORKING_DIRECTORY "${DOWNLOADS_DIR}"
         OUTPUT_VARIABLE output
         ERROR_VARIABLE error
