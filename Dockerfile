@@ -31,9 +31,9 @@ RUN pwsh -Command Write-Host "Cmake install passsed"
 RUN dir _tools\cmake-3.14.4-win64-x64\bin
 RUN C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --version
 
-RUN setx path "%path%;C:\_tools\cmake-3.14.4-win64-x64\bin"
+#RUN setx path "%path%;C:\_tools\cmake-3.14.4-win64-x64\bin"
 #RUN setx PATH 'C:\_tools\cmake-3.14.4-win64-x64\bin;%PATH%'
-RUN cmake.exe --version
+#RUN cmake.exe --version
 
 ADD kicad-winbuilder kicad-winbuilder
 #RUN git clone https://github.com/KiCad/kicad-winbuilder.git
