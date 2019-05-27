@@ -85,8 +85,8 @@ endif()
 set( WINDOWS_DIR $ENV{WINDIR} )
 if( EXISTS "${WINDOWS_DIR}/SysWOW64" )
     set( MSYS2 msys64 )
-    set( MSYS2_PACKAGE msys2-x86_64-20190524.exe )
-    set( MSYS2_MD5 89b7e384afcf0c027a337d1b05a7db7c )
+    set( MSYS2_PACKAGE msys2-base-x86_64-20180531.tar.xz )
+    set( MSYS2_MD5 29ce9b77a0fb8452d1a34858c977852f )
     set( HOST_ARCH x86_64 )
 else()
     set( MSYS2 msys32 )
@@ -156,7 +156,7 @@ macro( download_msys2mingw_base_package PACKAGE MD5 )
     endif()
 
     execute_process(
-        COMMAND "./${DOWNLOADS_DIR}/${PACKAGE}" "--platform minimal --script auto-install.js -v"
+        COMMAND "${SEVENZ_COMMAND}" x "${DOWNLOADS_DIR}/${PACKAGE}" "-y"
         WORKING_DIRECTORY "${DOWNLOADS_DIR}"
         OUTPUT_VARIABLE output
         ERROR_VARIABLE error
