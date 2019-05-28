@@ -45,8 +45,9 @@ jobs:
       echo helloe from win line two > somefile1.txt
       echo helloe from win line two > $(Build.ArtifactStagingDirectory)/somefile2.txt
       dir
-      REM docker build -t test .
+      docker build -t test .
       docker images
+      docker export test -o "$(Build.ArtifactStagingDirectory)/test.tar"
     displayName: 'Run a two-line script msw'
   - task: PublishBuildArtifacts@1
     displayName: 'publisher task'
