@@ -40,14 +40,14 @@ jobs:
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-win64-x64.zip','cmake.zip')
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1900.exe','7zip.exe')
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1900.msi','7zip.msi')
-      dir 
+      dir
       git clone  https://github.com/KiCad/kicad-winbuilder.git -b azure
       echo helloe from win line two > somefile1.txt
       echo helloe from win line two > $(Build.ArtifactStagingDirectory)/somefile2.txt
       dir
       docker build -t test .
       docker images
-      docker export -o "$(Build.ArtifactStagingDirectory)/test.tar" test 
+      docker save -o "$(Build.ArtifactStagingDirectory)/test.tar" test
     displayName: 'Run a two-line script msw'
   - task: PublishBuildArtifacts@1
     displayName: 'publisher task'
