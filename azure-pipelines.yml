@@ -42,6 +42,7 @@ jobs:
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1900.msi','7zip.msi')
       dir 
       git clone  https://github.com/KiCad/kicad-winbuilder.git -b azure
+      echo helloe from win line two > somefile1.txt
       echo helloe from win line two > $SYSTEM_ARTIFACTSDIRECTORY/somefile.txt
       dir
       REM docker build -t test .
