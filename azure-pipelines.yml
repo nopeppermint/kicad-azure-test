@@ -42,7 +42,8 @@ jobs:
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1900.msi','7zip.msi')
       dir 
       git clone  https://github.com/KiCad/kicad-winbuilder.git -b azure
-      docker build -t test .
+      echo helloe from win line two > somefile.txt
+      #docker build -t test .
       docker images
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
