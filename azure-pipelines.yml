@@ -48,10 +48,11 @@ jobs:
       docker images
     displayName: 'Run a two-line script msw'
   - task: PublishBuildArtifacts@1
+    displayName: 'publisher task'
       inputs:
         pathtoPublish: '*txt' 
         artifactName: 'drop'
-    displayName: 'Run a two-line script msw'
+
 - job: KiCad_Winbuilder_x86_64
   pool:
     vmImage: 'windows-2019'
