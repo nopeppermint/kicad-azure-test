@@ -46,6 +46,7 @@ jobs:
       dir
       REM docker build -t test .
       docker images
+    displayName: 'Run a two-line script msw'
   - task: PublishBuildArtifacts@1
       inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
