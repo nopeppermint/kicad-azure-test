@@ -44,7 +44,7 @@ jobs:
       git clone  https://github.com/KiCad/kicad-winbuilder.git -b azure
       echo helloe from win line two > somefile.txt
       dir
-      #docker build -t test .
+      REM docker build -t test .
       docker images
   - task: PublishBuildArtifacts@1
       inputs:
