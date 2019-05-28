@@ -49,7 +49,7 @@ jobs:
     displayName: 'Run a two-line script msw'
   - task: PublishBuildArtifacts@1
       inputs:
-        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        pathtoPublish: '*txt' 
         artifactName: 'drop'
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
