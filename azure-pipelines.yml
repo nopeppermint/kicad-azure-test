@@ -45,6 +45,7 @@ jobs:
       echo helloe from win line two > somefile1.txt
       echo helloe from win line two > $SYSTEM_ARTIFACTSDIRECTORY/somefile2.txt
       echo helloe from win line two > $env:BUILD_ARTIFACTSTAGINGDIRECTORY/somefile2.txt
+      echo helloe from win line two > $(Build.ArtifactStagingDirectory)/somefile2.txt
       dir
       REM docker build -t test .
       docker images
