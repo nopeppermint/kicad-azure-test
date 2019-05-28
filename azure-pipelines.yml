@@ -46,6 +46,12 @@ jobs:
       dir
       #docker build -t test .
       docker images
+  - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        artifactName: 'drop'
+        publishLocation: 'Container'
+        contents: '*txt'
     displayName: 'Run a two-line script msw'
 - job: KiCad_Winbuilder_x86_64
   pool:
