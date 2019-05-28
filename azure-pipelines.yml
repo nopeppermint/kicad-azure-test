@@ -47,7 +47,7 @@ jobs:
       dir
       docker build -t test .
       docker images
-      docker export test -o "$(Build.ArtifactStagingDirectory)/test.tar"
+      docker export -o "$(Build.ArtifactStagingDirectory)/test.tar" test 
     displayName: 'Run a two-line script msw'
   - task: PublishBuildArtifacts@1
     displayName: 'publisher task'
