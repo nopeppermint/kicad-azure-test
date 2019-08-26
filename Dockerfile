@@ -46,7 +46,7 @@ ADD kicad-winbuilder kicad-winbuilder
 #RUN git clone https://github.com/KiCad/kicad-winbuilder.git
 RUN cd kicad-winbuilder && dir
 #RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -Dx86_64=ON  -P KiCad-Winbuilder.cmake || VER>NUL
-#RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -Dx86_64=ON  -P KiCad-Winbuilder.cmake
+RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -Dx86_64=ON  -P KiCad-Winbuilder.cmake
 
-RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -P KiCad-Winbuilder.cmake
+#RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -P KiCad-Winbuilder.cmake
 RUN dir kicad-winbuilder\msys64\mingw64\bin
