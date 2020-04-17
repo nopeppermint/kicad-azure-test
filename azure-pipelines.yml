@@ -41,7 +41,7 @@ jobs:
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1900.exe','7zip.exe')
       pwsh -Command $ErrorActionPreference = 'Stop'; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z1900.msi','7zip.msi')
       dir
-      git clone  https://github.com/KiCad/kicad-winbuilder.git -b azure
+      git clone https://gitlab.com/kicad/packaging/kicad-win-builder.git -b azure kicad-winbuilder
       echo helloe from win line two > somefile1.txt
       echo helloe from win line two > $(Build.ArtifactStagingDirectory)/somefile2.txt
       dir
@@ -57,7 +57,7 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: |
-      git clone https://github.com/KiCad/kicad-winbuilder.git
+      git https://gitlab.com/kicad/packaging/kicad-win-builder.git kicad-winbuilder
       cd kicad-winbuilder
       set
       echo Yoyoyoyoy
@@ -70,8 +70,8 @@ jobs:
     vmImage: 'windows-2019'
   steps:
   - script: |
-      git clone https://github.com/KiCad/kicad-winbuilder.git
-      cd kicad-winbuilder
+      git clone https://gitlab.com/kicad/packaging/kicad-win-builder.git
+      cd kicad-win-builder
       set
       echo Yoyoyoyoy
       cmake --version
