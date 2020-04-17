@@ -24,7 +24,13 @@ jobs:
   - script: |
       echo hello from macOS
       sw_vers
-    displayName: 'Run a one-line script mac'
+      git clone https://gitlab.com/kicad/packaging/kicad-mac-builder.git
+      cd kicad-mac-builder
+      mkdir -p /vagrant/external/
+      cp external/oce* /vagrant/external
+      ./ci/src/bootstrap.sh
+
+    displayName: 'Run a builder on mac'
 - job: Windows
   pool:
     vmImage: 'windows-2019'
