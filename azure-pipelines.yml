@@ -26,8 +26,7 @@ jobs:
       sw_vers
       git clone https://gitlab.com/kicad/packaging/kicad-mac-builder.git
       cd kicad-mac-builder
-      mkdir -p /vagrant/external/
-      cp external/oce* /vagrant/external
+      sed -i 's/\/vagrant/\.\.\/\.\./g' ci/src/bootstrap.sh
       ./ci/src/bootstrap.sh
 
     displayName: 'Run a builder on mac'
