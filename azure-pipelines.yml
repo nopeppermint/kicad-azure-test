@@ -25,9 +25,9 @@ jobs:
       echo hello from macOS
       sw_vers
       git clone https://gitlab.com/kicad/packaging/kicad-mac-builder.git
-      cd kicad-mac-builder
-      sed -i '' 's/\/vagrant/\.\.\/\.\./g' ci/src/bootstrap.sh
-      ./ci/src/bootstrap.sh
+      cd kicad-mac-builder/ci/src
+      sed -i '' 's/\/vagrant/\.\.\/\.\./g' bootstrap.sh
+      ./bootstrap.sh
     displayName: 'Run a builder on mac'
 - job: Windows
   pool:
