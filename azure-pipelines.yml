@@ -19,9 +19,11 @@ jobs:
     displayName: 'Run a one-line script lin'
 - job: macOS
   pool:
-    vmImage: 'macOS-10.14'
+    vmImage: 'macOS-10.15'
   steps:
-  - script: echo hello from macOS
+  - script: |
+      echo hello from macOS
+      sw_vers
     displayName: 'Run a one-line script mac'
 - job: Windows
   pool:
