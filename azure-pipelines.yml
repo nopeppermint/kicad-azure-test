@@ -28,6 +28,7 @@ jobs:
       cd kicad-mac-builder/ci/src
       sed -i '' 's/\/vagrant/\.\.\/\.\./g' bootstrap.sh
       ./bootstrap.sh
+      ./build.py --target=kicad
     displayName: 'Run a builder on mac'
 - job: Windows
   pool:
