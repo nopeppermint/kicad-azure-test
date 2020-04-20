@@ -44,11 +44,11 @@ RUN C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --version
 
 
 # local script
-ADD KiCad-Winbuilder.cmake  KiCad-Winbuilder.cmake.local
 ADD kicad-winbuilder kicad-winbuilder
-RUN copy KiCad-Winbuilder.cmake.local kicad-winbuilder\KiCad-Winbuilder.cmake
+ADD KiCad-Winbuilder.cmake  kicad-winbuilder/KiCad-Winbuilder.cmake.local
+#RUN copy KiCad-Winbuilder.cmake.local kicad-winbuilder\KiCad-Winbuilder.cmake
 RUN cd kicad-winbuilder && dir
-RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -Dx86_64=ON  -P KiCad-Winbuilder.cmake
+RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -Dx86_64=ON  -P KiCad-Winbuilder.cmake.local
 
 #RUN cd kicad-winbuilder && C:\_tools\cmake-3.14.4-win64-x64\bin\cmake.exe --trace -P KiCad-Winbuilder.cmake
 RUN dir kicad-winbuilder\msys64\mingw64\bin
