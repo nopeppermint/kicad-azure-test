@@ -6,7 +6,7 @@ agent:
     os_image: macos-xcode11
     
 execution_time_limit:
-  hours: 3
+  hours: 5
   
 blocks:
   - name: 'Block #1'
@@ -22,3 +22,5 @@ blocks:
             - pwd
             - sed -i '' 's/\/vagrant/\.\.\/\.\./g' bootstrap.sh
             - ./bootstrap.sh
+            - cd ../..
+            - ./build.py --target package-kicad-nightly
