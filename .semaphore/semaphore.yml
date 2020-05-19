@@ -20,4 +20,4 @@ blocks:
             - pwd
             - cd kicad-mac-builder/ci/src
             - pwd
-            - ./build.py --target package-kicad-nightly
+            - ./bootstrap.sh
