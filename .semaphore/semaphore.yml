@@ -20,5 +20,4 @@ blocks:
             - pwd
             - cd kicad-mac-builder/ci/src
             - pwd
-            - sed -i '' 's/\/vagrant/\.\.\/\.\./g' bootstrap.sh
-            - bootstrap.sh
+            - ./build.py --target package-kicad-nightly
