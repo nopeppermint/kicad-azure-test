@@ -18,3 +18,4 @@ blocks:
             - sw_vers
             - 'git clone https://gitlab.com/kicad/packaging/kicad-mac-builder.git'
             - cd kicad-mac-builder/ci/src
+            - bootstrap.sh
