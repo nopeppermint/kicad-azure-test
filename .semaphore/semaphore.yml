@@ -17,5 +17,7 @@ blocks:
             - echo hello from macOS
             - sw_vers
             - 'git clone https://gitlab.com/kicad/packaging/kicad-mac-builder.git'
+            - pwd
             - cd kicad-mac-builder/ci/src
+            - pwd
             - bootstrap.sh
