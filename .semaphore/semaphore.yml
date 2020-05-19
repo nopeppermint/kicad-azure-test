@@ -23,4 +23,6 @@ blocks:
             - sed -i '' 's/\/vagrant/\.\.\/\.\./g' bootstrap.sh
             - ./bootstrap.sh
             - cd ../..
+            - git config --global user.name "CI TEST"
+            - git config --global user.email "info@google.com"            
             - ./build.py --target package-kicad-nightly
