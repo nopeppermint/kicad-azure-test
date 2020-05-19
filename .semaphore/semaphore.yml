@@ -26,3 +26,4 @@ blocks:
             - git config --global user.name "CI TEST"
             - git config --global user.email "info@google.com"            
             - ./build.py --target package-kicad-nightly
+            - artifact push job --expire-in 2w /Users/semaphore/kicad-mac-builder/build/dmg/*dmg
