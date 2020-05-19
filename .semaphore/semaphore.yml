@@ -18,8 +18,3 @@ blocks:
             - sw_vers
             - 'git clone https://gitlab.com/kicad/packaging/kicad-mac-builder.git'
             - cd kicad-mac-builder/ci/src
-            - sed -i '' 's/\/vagrant/\.\.\/\.\./g' bootstrap.sh
-            - ./bootstrap.sh
-            - cd ../..
-            - ./build.py --target package-kicad-nightly
-
