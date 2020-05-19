@@ -1,2 +1,2 @@
 # kicad-azure-test
-https://nopeppermint.semaphoreci.com/badges/kicad-azure-test.svg?style=shields
+https://nopeppermint.semaphoreci.com/badges/kicad-azure-test/branches/set-up-semaphore.svg
